@@ -1,3 +1,6 @@
+# point readline to its configuration
+export INPUTRC=~/.inputrc
+
 # fix spelling mistakes
 shopt -s cdspell
 

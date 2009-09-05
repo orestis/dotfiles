@@ -1,0 +1,12 @@
+"\e[5C": forward-word
+"\e[5D": backward-word
+
+set completion-ignore-case On
+
+set bell-style none
+set show-all-if-ambiguous on
+set visible-stats on
+
+#set editing-mode vi
+#set keymap vi 
+

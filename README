@@ -2,4 +2,7 @@ Various .files.
 
 ln -s to the appropriate places.
 
+profile: ~/.profile # shell settings
+inputrc: ~/.inputrc # readline settings
+
 WTF License.

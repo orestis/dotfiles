@@ -45,3 +45,7 @@ function pyclear
 #PS1='\u: \W$(__git_ps1 " (%s)")\$ '
 
 export LSCOLORS=Cxfxcxdxbxegedabagacad
+
+# virtualenv wrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper_bashrc

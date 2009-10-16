@@ -1,0 +1,121 @@
+set backupdir=$VIM/backups,.
+set directory=$VIM/backups,.
+
+set nocompatible
+let mapleader = ","
+set bs=2
+set vb t_vb=
+set noerrorbells
+set autoindent
+set nosmartindent
+set showmatch
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set wildmode=longest,full
+filetype plugin indent on
+syntax on
+
+set guifont=Anonymous\ Pro:h11,Consolas:h11,Lucida\ Console:h11,Letter\ Gothic,Courier\ New:h10,Courier
+
+set path=**
+"set exrc " read _vimrc in current directory
+
+set complete-=i "do not search included files for keywords to complete
+
+" appearance
+set cursorline
+set ruler		" show the cursor position all the time
+set number
+
+vnoremap <left> h
+vnoremap <right> l
+vnoremap <up> k
+vnoremap <down> j
+
+let python_highlight_all=1
+
+set history=50		" keep 50 lines of command line history
+
+" search stuff
+set incsearch		" do incremental searching
+set ignorecase
+set smartcase
+set hlsearch
+
+
+filetype plugin indent on
+
+let g:pyindent_open_paren=4
+set completeopt=menuone,longest
+
+color wombat
+hi Normal  guifg=#f6f3e8 guibg=#202020 gui=none
+hi String  guifg=#95e454 gui=none
+hi Special guifg=#f6f3b8
+
+" behaviour
+set autowriteall
+set selection=inclusive
+set wildmenu
+"set wildmode=list
+set scrolloff=5
+set guioptions-=T
+set guifont=Consolas:h13
+set spelllang=en_gb
+set clipboard+=unnamed
+
+" no beeps or flashes on error
+set noerrorbells
+set vb t_vb=
+autocmd GUIEnter * set vb t_vb=
+
+iabbr improt import
+iabbr slef self
+iabbr sefl self
+iab ifmain_ if __name__ == '__main__':<CR>
+
+"dont move cursor after pressing .
+noremap . md.`d
+
+" save when exiting insert mode
+"inoremap <silent> <ESC> <ESC>:update<cr>
+
+nmap  s <Plug>Ysurround
+nmap  S <Plug>YSurround
+
+nmap Y y$
+imap <silent> <C-E> <esc>A
+imap <silent> <C-A> <esc>I
+imap <silent> <C-CR> <c-o>o
+imap <silent> <C-S-CR> <c-o>O
+map <silent> <C-CR> :normal o<CR>k
+map <silent> <C-S-CR> :normal O<CR>j
+map <silent> <c-k> dd
+
+let g:FuzzyFinderOptions = { 'Base':{}, 'Buffer':{}, 'File':{}, 'Dir':{}, 'MruFile':{}, 'MruCmd':{}, 'FavFile':{}, 'Tag':{}, 'TaggedFile':{}}
+let g:FuzzyFinderOptions.Base.min_length = 0
+let g:FuzzyFinderOptions.Base.abbrev_map = {
+    \ "^CURRENT:": [
+    \    "./**/",
+    \ ]
+\}
+let g:FuzzyFinderOptions.File.min_length = 10
+let g:FuzzyFinderOptions.File.matching_limit = 200
+let g:FuzzyFinderOptions.File.excluded_path = '\v\~$|Documentation\\|Resources\\|\.o$|\.exe$|\.png$|\.dll$|\.pyc$|\.bak$|\.swp$|((^|[/\\])\.[/\\]$)'
+
+nnoremap <Leader>f :FuzzyFinderFile CURRENT:<CR>
+nnoremap <Leader>b :FuzzyFinderBuffer<CR>
+
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+
+

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/orestis/Developer/EDMStudio/git/DemocracyToday'
+let g:netrw_dirhist_2='/Users/orestis/Developer/EDMStudio/git/MoADUtils/moadutils/tldb'
+let g:netrw_dirhist_3='/Users/orestis/Developer/EDMStudio/SVN/vendor/fabric/fabric-0.9b1/fabric'
+let g:netrw_dirhist_4='/Users/orestis/Developer/EDMStudio/fabric/fabric/contrib'
+let g:netrw_dirhist_5='/Users/orestis/Developer/EDMStudio/git/WOZTest/scenarios/test_scenario'

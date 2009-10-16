@@ -39,10 +39,9 @@ function pyclear
 }
 
 # git stuff
-# TODO re activate this
-#export GIT_PS1_SHOWDIRTYSTATE=1
-#source $HOME/.bash_completion.d/git-completion.bash
-#PS1='\u: \W$(__git_ps1 " (%s)")\$ '
+export GIT_PS1_SHOWDIRTYSTATE=1
+source $HOME/.bash_completion.d/git-completion.bash
+PS1='\u: \W$(__git_ps1 " (%s)")\$ '
 
 export LSCOLORS=Cxfxcxdxbxegedabagacad
 

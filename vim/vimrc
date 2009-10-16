@@ -1,5 +1,5 @@
-set backupdir=$VIM/backups,.
-set directory=$VIM/backups,.
+set backupdir=$HOME/.vim/backups//,.
+set directory=$HOME/.vim/backups//,.
 
 set nocompatible
 let mapleader = ","

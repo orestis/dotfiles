@@ -9,6 +9,12 @@ HISTCONTROL=ignoreboth
 
 alias cd..="cd .."
 alias ls='ls -G'
+MACVIM_PATH='/Applications/MacVim.app/Contents/MacOS/Vim'
+if [ -e $MACVIM_PATH ]
+then
+    echo 'aliasing macvim'
+    alias vim=$MACVIM_PATH
+fi
 
 
 function gitg
@@ -48,3 +54,8 @@ export LSCOLORS=Cxfxcxdxbxegedabagacad
 # virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper_bashrc
+
+if [ -e ~/.profile_local ]
+then
+    source ~/.profile_local
+fi

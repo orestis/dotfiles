@@ -12,7 +12,6 @@ alias ls='ls -G'
 MACVIM_PATH='/Applications/MacVim.app/Contents/MacOS/Vim'
 if [ -e $MACVIM_PATH ]
 then
-    echo 'aliasing macvim'
     alias vim=$MACVIM_PATH
 fi
 

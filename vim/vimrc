@@ -117,5 +117,8 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
-
+function TrimWhiteSpace()
+ %s/\s*$//
+ ''
+:endfunction
 

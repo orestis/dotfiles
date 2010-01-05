@@ -122,3 +122,6 @@ function TrimWhiteSpace()
  ''
 :endfunction
 
+" Objective j 
+au BufNewFile,BufRead *.j                       setf objj 
+

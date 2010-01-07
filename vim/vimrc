@@ -108,6 +108,7 @@ let g:FuzzyFinderOptions.File.excluded_path = '\v\~$|Documentation\\|Resources\\
 
 nnoremap <Leader>f :FuzzyFinderFile CURRENT:<CR>
 nnoremap <Leader>b :FuzzyFinderBuffer<CR>
+nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>  
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler

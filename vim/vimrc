@@ -35,6 +35,15 @@ vnoremap <right> l
 vnoremap <up> k
 vnoremap <down> j
 
+:map <MiddleMouse> <Nop>
+:imap <MiddleMouse> <Nop>
+:map <2-MiddleMouse> <Nop>
+:imap <2-MiddleMouse> <Nop>
+:map <3-MiddleMouse> <Nop>
+:imap <3-MiddleMouse> <Nop>
+:map <4-MiddleMouse> <Nop>
+:imap <4-MiddleMouse> <Nop>
+
 let python_highlight_all=1
 
 set history=50		" keep 50 lines of command line history

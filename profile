@@ -13,6 +13,7 @@ MACVIM_PATH='/Applications/MacVim.app/Contents/MacOS/Vim'
 if [ -e $MACVIM_PATH ]
 then
     alias vim=$MACVIM_PATH
+    export EDITOR=$MACVIM_PATH
 fi
 
 

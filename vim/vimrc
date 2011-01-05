@@ -18,8 +18,6 @@ set wildmode=longest,full
 filetype plugin indent on
 syntax on
 
-set guifont=Anonymous\ Pro:h11,Consolas:h11,Lucida\ Console:h11,Letter\ Gothic,Courier\ New:h10,Courier
-
 set path=**
 "set exrc " read _vimrc in current directory
 
@@ -34,6 +32,58 @@ vnoremap <left> h
 vnoremap <right> l
 vnoremap <up> k
 vnoremap <down> j
+
+:map α a
+:map β b
+:map γ g
+:map δ d
+:map ε e
+:map ζ z
+:map η h
+:map θ u
+:map ι i
+:map κ k
+:map λ l
+:map μ m
+:map ν n
+:map ξ j
+:map ο o
+:map π p
+:map ρ r
+:map σ s
+:map τ t
+:map υ y
+:map φ f
+:map χ x
+:map ψ c
+:map ω v
+:map ς w
+
+:map Α A
+:map Β B
+:map Γ C
+:map Δ D
+:map Ε E
+:map Ζ Z
+:map Η H
+:map Θ U
+:map Ι I
+:map Κ K
+:map Λ L
+:map Μ M
+:map Ν N
+:map Ξ J
+:map Ο O
+:map Π P
+:map Ρ R
+:map Σ S
+:map Τ T
+:map Υ Y
+:map Φ F
+:map Χ X
+:map Ψ C
+:map Ω V
+:map Σ W
 
 :map <MiddleMouse> <Nop>
 :imap <MiddleMouse> <Nop>
@@ -55,7 +105,6 @@ set smartcase
 set hlsearch
 
 
-filetype plugin indent on
 
 let g:pyindent_open_paren=4
 set completeopt=menuone,longest
@@ -72,7 +121,7 @@ set wildmenu
 "set wildmode=list
 set scrolloff=5
 set guioptions-=T
-set guifont=Consolas:h13
+set guifont=Menlo:h12
 set spelllang=en_gb
 set clipboard+=unnamed
 
@@ -134,4 +183,23 @@ function TrimWhiteSpace()
 
 " Objective j 
 au BufNewFile,BufRead *.j                       setf objj 
+
+if exists("loaded_matchit")
+    let b:match_ignorecase = 1
+    let b:match_skip = 's:Comment'
+    let b:match_words = '<:>,' .
+    \ '<\@<=[ou]l\>[^>]*\%(>\|$\):<\@<=li\>:<\@<=/[ou]l>,' .
+    \ '<\@<=dl\>[^>]*\%(>\|$\):<\@<=d[td]\>:<\@<=/dl>,' .
+    \ '<\@<=\([^/][^ \t>]*\)[^>]*\%(>\|$\):<\@<=/\1>,'  .-
+    \ '{% *if .*%}:{% *else *%}:{% *endif *%},' .-
+    \ '{% *ifequal .*%}:{% *else *%}:{% *endifequal *%},' .-
+    \ '{% *ifnotequal .*%}:{% *else *%}:{% *endifnotequal *%},' .-
+    \ '{% *ifchanged .*%}:{% *else *%}:{% *endifchanged *%},' .-
+    \ '{% *for .*%}:{% *endfor *%},' .-
+    \ '{% *with .*%}:{% *endwith *%},' .
+    \ '{% *comment .*%}:{% *endcomment *%},' .
+    \ '{% *block .*%}:{% *endblock *%},' .
+    \ '{% *filter .*%}:{% *endfilter *%},' .
+    \ '{% *spaceless .*%}:{% *endspaceless *%}'-
+endif
 

@@ -1,3 +1,5 @@
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
 # point readline to its configuration
 export INPUTRC=~/.inputrc
 
@@ -53,7 +55,8 @@ export LSCOLORS=Cxfxcxdxbxegedabagacad
 
 # virtualenv wrapper
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper_bashrc
+source /usr/local/bin/virtualenvwrapper.sh
+export PYTHONPATH="/usr/local/lib/python2.6/site-packages/:$PYTHONPATH"
 
 if [ -e ~/.profile_local ]
 then
